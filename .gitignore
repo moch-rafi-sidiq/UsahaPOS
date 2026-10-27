@@ -1,0 +1,11 @@
+# Berkas sistem dan editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Dependensi opsional (proyek ini tidak membutuhkannya)
+node_modules/
+npm-debug.log*

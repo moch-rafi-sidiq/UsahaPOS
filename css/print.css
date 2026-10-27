@@ -1,0 +1,115 @@
+/* ==========================================================================
+   UsahaPOS — print.css
+   Mode cetak struk. Hanya area struk yang ditampilkan.
+   ========================================================================== */
+
+@media print {
+  @page {
+    margin: 6mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  body {
+    font-size: 11px;
+  }
+
+  .app-shell,
+  .sidebar,
+  .sidebar-backdrop,
+  .topbar,
+  .toast-root,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Sembunyikan semua modal kecuali struk */
+  .modal-overlay {
+    display: none !important;
+  }
+
+  .modal-overlay.receipt-overlay {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  .receipt-overlay .modal {
+    display: block !important;
+    width: 76mm !important;
+    max-width: 76mm !important;
+    max-height: none !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    background: #fff !important;
+  }
+
+  .receipt-overlay .modal-header,
+  .receipt-overlay .modal-footer,
+  .receipt-overlay .modal-close,
+  .receipt-overlay .receipt-actions-note {
+    display: none !important;
+  }
+
+  .receipt-overlay .modal-body {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .receipt {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  .receipt * {
+    color: #000 !important;
+    border-color: #555 !important;
+  }
+
+  .receipt-head h3 {
+    font-size: 12pt !important;
+  }
+
+  .receipt-total-row.grand {
+    font-size: 11pt !important;
+  }
+
+  .receipt-stamp {
+    border-color: #000 !important;
+    color: #000 !important;
+  }
+
+  .receipt-divider {
+    border-top: 1px dashed #555 !important;
+  }
+
+  .receipt-item-row span:last-child,
+  .receipt-meta span:last-child {
+    color: #000 !important;
+  }
+}
